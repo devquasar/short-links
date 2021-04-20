@@ -22,10 +22,12 @@ export async function processLink (processType = 'shorten', urlToProcess) {
   if (!trimmedURL || !isValid(trimmedURL)) return
   const body = createBody(processType, urlToProcess)
 
-  const response = await fetch(apiURL + processType, {
+  const responsePromise = await fetch(apiURL + processType, {
     method: 'POST',
     headers: headers,
     body: JSON.stringify(body)
+  }).then((response) => {
+    return response.json()
   })
-  return await response.json()
+  return responsePromise
 }
