@@ -1,24 +1,16 @@
 # short-links
 
-## Project setup
+
+## Service website
 ```
-npm install
+https://t.ly/
+```
+## API docs
+```
+https://t.ly/docs/index.html
 ```
 
-### Compiles and hot-reloads for development
+## Instructions
 ```
-npm run serve
+For plays with app u need generate API KEY on service website and put it inside .env.local file under VUE_APP_API_TOKEN variable 
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
